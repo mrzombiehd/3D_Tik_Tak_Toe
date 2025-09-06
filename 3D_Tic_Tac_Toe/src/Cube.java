@@ -258,10 +258,17 @@ public class Cube {
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++){
                     if (j == 2) {
-                        print += lvl[i][j];
+                        if(lvl[i][j]=='\u0000'){
+                            print += "?";
+                        }
+                        else{
+                        print += lvl[i][j];}
                     }
                     else {
-                        print += (lvl[i][j] + "-");
+                        if(lvl[i][j]=='\u0000'){
+                            print+="?"+"-";
+                        }else{
+                        print += (lvl[i][j] + "-");}
                     }
                 }
                 if (i == 2) {
